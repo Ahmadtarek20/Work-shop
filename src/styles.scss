@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+@import "./assets/sass/abstract/variabls", "./assets/sass/abstract/colors",
+  "./assets/sass/abstract/mixin", "./assets/sass/abstract/media-queries";
+
+@import "./assets/sass/vendors/normlize";
+
+@import "./assets/sass/componants/buttons";
+
+@import "./assets/sass/layout/header", "./assets/sass/layout/grid",
+  "./assets/sass/layout/footer";
+
+@import "./assets/sass/pages/global", "./assets/sass/pages/homepage",
+  "./assets/sass/pages/detailspage", "./assets/sass/pages/listingpage";

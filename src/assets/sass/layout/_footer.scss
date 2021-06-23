@@ -1,0 +1,68 @@
+.footer {
+  background-color: $grayColor;
+}
+.footer-content {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(4, 290px);
+  gap: 2px;
+  @media #{$maxMobile} {
+    grid-template-columns: repeat(2, 290px);
+    padding-bottom: 10px;
+  }
+  .about,
+  .privacy {
+    ul {
+      li {
+        line-height: 25px;
+        font-size: 13px;
+        color: $textColor;
+      }
+    }
+  }
+  .contact {
+    p {
+      color: $textColor;
+    }
+    .input-box {
+      width: 60%;
+      padding: 10px;
+      background-color: $light;
+      border: 2px solid $grayColor;
+      color: $light;
+      border-radius: 7%;
+      -webkit-border-radius: 7%;
+      -moz-border-radius: 7%;
+      -ms-border-radius: 7%;
+      -o-border-radius: 7%;
+    }
+    button {
+      padding: 10px;
+      background-color: $scandColor;
+      border: 1px solid $scandColor;
+      border-radius: 7%;
+      -webkit-border-radius: 7%;
+      -moz-border-radius: 7%;
+      -ms-border-radius: 7%;
+      -o-border-radius: 7%;
+    }
+  }
+  .social {
+    p {
+      color: $textColor;
+    }
+    ul {
+      display: flex;
+      li {
+        margin-right: 5px;
+        color: $textColor;
+      }
+    }
+  }
+}
+.copy-rith {
+  background-color: $mainColor;
+  padding: 8px;
+  text-align: center;
+  color: $light;
+}
