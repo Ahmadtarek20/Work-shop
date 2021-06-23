@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  hideSideBar: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openMenue() {
+
+  }
+  openSideMenue() {
+    this.hideSideBar = true;
+  }
+  closeMenue() {
+    this.hideSideBar = false;
+
   }
 
 }
