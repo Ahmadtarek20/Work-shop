@@ -35,7 +35,9 @@
 </div>
 
 
-<app-home-news-listing></app-home-news-listing>
+<div *ngIf="newsList?.length>0">
+  <app-home-news-listing [newsList]="newsList"></app-home-news-listing>
+</div>
 <!--  -->
 
 <div class="services">

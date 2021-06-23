@@ -24,10 +24,11 @@
         <label for="categuries">Categury</label>
         <select class="input-select" id="categuries" name="categuries">
           <option selected value="">Select</option>
-          <option value="test1">test 1</option>
-          <option value="test2">test 2</option>
-          <option value="test3">test 3</option>
-          <option value="test4">test 4</option>
+          <ng-container *ngFor="let categuryItem of categoriesList">
+            <option [value]="categuryItem.id">
+              {{ categuryItem.name }}
+            </option>
+          </ng-container>
         </select>
       </div>
       <div class="box-serch">
@@ -39,7 +40,9 @@
       </div>
     </div>
 
-    <app-news-card></app-news-card>
+    <div *ngFor="let newsItem of newsList">
+      <app-news-card [newsItem]='newsItem'></app-news-card>
+    </div>
 
 
     <div class="clearfix"></div>

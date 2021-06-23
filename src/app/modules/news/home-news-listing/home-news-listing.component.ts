@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { News } from 'src/app/Models/news';
 
 @Component({
   selector: 'app-home-news-listing',
@@ -6,17 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-news-listing.component.scss']
 })
 export class HomeNewsListingComponent implements OnInit {
+  @Input() newsList: News[] = [];
 
-  news = [
-    { id: 1, data: 'data' },
-    { id: 2, data: 'data' },
-    { id: 3, data: 'data' },
-    { id: 4, data: 'data' },
-    { id: 5, data: 'data' }
-  ]
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Home', this.newsList);
   }
 
 }

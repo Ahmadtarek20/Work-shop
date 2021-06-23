@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from 'src/app/services/api/news.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  newsList = [];
+  constructor(
+    private newsService: NewsService,
+  ) { }
 
-  ngOnInit(): void {
-    console.log('Hey')
+  ngOnInit() {
+    this.getNewsList();
+  }
+  getNewsList() {
+    const params = {
+      // any prams
+    };
+    this.newsService.getNewsList(params).subscribe((res: any) => {
+      this.newsList = res.articles.filter(el => el.showOnHomepage === true);
+    });
   }
 
 }

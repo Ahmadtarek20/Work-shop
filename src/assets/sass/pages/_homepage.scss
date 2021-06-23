@@ -236,7 +236,12 @@
       color: $scandColor;
     }
   }
+  a {
+    cursor: pointer;
+  }
   .news-box {
+    height: 70vh;
+    position: relative;
     float: $float-left;
     margin-bottom: 20px;
     box-shadow: 0px 9px 28px $grayColor;
@@ -302,6 +307,11 @@
       padding-left: 5%;
       padding-bottom: 5%;
       display: block;
+      text-decoration: none;
+      color: $scandColor;
+      position: absolute;
+      width: 100%;
+      top: 90%;
       span {
         color: $textColor;
         margin-left: 2%;

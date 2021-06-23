@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { News } from 'src/app/Models/news';
 
 @Component({
   selector: 'app-news-card',
@@ -6,19 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-card.component.scss']
 })
 export class NewsCardComponent implements OnInit {
-  news = [
-    { id: 1, data: 'data' },
-    { id: 2, data: 'data' },
-    { id: 3, data: 'data' },
-    { id: 4, data: 'data' },
-    { id: 5, data: 'data' },
-    { id: 6, data: 'data' },
-    { id: 7, data: 'data' },
-    { id: 8, data: 'data' }
-  ]
+
+  @Input() newsItem: News;
+  @Output() show = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  showDetails(newsItem) {
+    console.log(newsItem);
+    this.show.emit(newsItem);
   }
 
 }
