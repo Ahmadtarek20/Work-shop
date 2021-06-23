@@ -1,4 +1,4 @@
-.players {
+.news {
   margin-top: 2%;
   .bar-notfiy {
     ul {
@@ -104,7 +104,7 @@
       color: $scandColor;
     }
   }
-  .players-box {
+  .news-box {
     float: $float-left;
     margin-bottom: 20px;
     box-shadow: 0px 9px 28px $grayColor;
@@ -161,7 +161,7 @@
         }
       }
     }
-    .players-title {
+    .news-title {
       padding-left: 5%;
     }
     .link {
@@ -182,4 +182,4 @@
   }
 }
 
-/*end players*/
+/*end news*/
