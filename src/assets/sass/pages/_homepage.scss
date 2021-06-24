@@ -69,6 +69,7 @@
     padding: 11px;
     top: 80%;
     left: 20%;
+    color: $light;
     background: $grayColor;
     @media #{$minSmall} {
       top: 22%;
@@ -93,6 +94,7 @@
     padding: 11px;
     top: 80%;
     right: 20%;
+    color: $light;
     background: $grayColor;
     @media #{$minSmall} {
       top: 22%;
@@ -344,7 +346,7 @@
     position: absolute;
     top: 27%;
     display: flex;
-    left: 30%;
+    left: 35%;
     flex-wrap: wrap;
     margin-top: 30px;
     @media #{$minSmall} {
