@@ -87,7 +87,6 @@
     position: absolute;
     background-color: $light;
     width: 145px;
-    height: 240px;
     padding-left: 11px;
     border: 2px solid $light;
     border-radius: 6%;
@@ -109,6 +108,7 @@
             line-height: 2px;
           }
         }
+
         .active {
           color: $scandColor;
         }
@@ -132,6 +132,11 @@
             margin-left: 10px;
             color: $dark;
           }
+        }
+      }
+      .theme-change {
+        i {
+          font-size: 40px;
         }
       }
       .check-mark {

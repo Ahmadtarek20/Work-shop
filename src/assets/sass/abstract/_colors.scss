@@ -3,4 +3,11 @@ $light: #f7f7f7;
 $mainColor: #103293;
 $scandColor: #13beff;
 $grayColor: #d9d9d9;
-$textColor:#9c9ea2;
+$textColor: #9c9ea2;
+
+.theme-light {
+  --scandary-bg: #ffffff;
+}
+.theme-dark {
+  --scandary-bg: #000000;
+}

@@ -12,7 +12,6 @@ export class HomeNewsListingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('Home', this.newsList);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemsService } from './services/style/thems.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Work-shop';
+  theme = localStorage.getItem('theme')
+  constructor(
+    public themeService: ThemsService
+  ) {
+    console.log(this.theme);
+  }
+
+
+
 }

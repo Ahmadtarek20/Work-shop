@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemsService } from 'src/app/services/style/thems.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,11 @@ export class HeaderComponent implements OnInit {
 
   hideSideBar: boolean = false;
   openSetingMenue: boolean = false;
-  constructor() { }
+  theme = localStorage.getItem('theme')
+
+  constructor(
+    public themeService: ThemsService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +31,8 @@ export class HeaderComponent implements OnInit {
   }
   closeMenue() {
     this.hideSideBar = false;
-
   }
-
+  changeTheme() {
+    this.themeService.changeTheme();
+  }
 }

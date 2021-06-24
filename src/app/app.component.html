@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container main" [class]="themeService.peresentThemeSubject | async">
   <div class="main-header">
     <app-header></app-header>
     <!-- <p>main works!</p> -->

@@ -18,7 +18,6 @@ export class NewsCardComponent implements OnInit {
   }
 
   showDetails(newsItem) {
-    console.log(newsItem);
     this.show.emit(newsItem);
   }
 
