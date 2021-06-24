@@ -55,8 +55,11 @@
     </div>
   </div>
 
-  <div class="setting-menue">
+  <div class="setting-menue" *ngIf="openSetingMenue">
     <div class="links">
+      <div class="check-mark">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
       <ul>
         Language
         <li><a href="#">Engulsh</a></li>
@@ -64,8 +67,11 @@
       </ul>
       <ul>
         Font Size
-        <li><a href="#">News</a></li>
-        <li><a href="#">Events</a></li>
+        <div class="font-size">
+          <li><i class="fa fa-font font1" aria-hidden="true"></i></li>
+          <li><i class="fa fa-font font2 active" aria-hidden="true"></i></li>
+          <li><i class="fa fa-font font3" aria-hidden="true"></i></li>
+        </div>
       </ul>
       <ul>
         Acount

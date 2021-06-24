@@ -12,6 +12,7 @@
   z-index: 10;
   position: fixed;
   width: 100%;
+  top: 0;
 
   &__logo {
     cursor: pointer;
@@ -25,6 +26,7 @@
     i {
       font-size: 30px;
       position: absolute;
+      margin-top: 14px;
     }
   }
   .side-menu {
@@ -79,26 +81,62 @@
     }
   }
   .setting-menue {
-    position: relative;
+    position: absolute;
     background-color: $light;
-    width: 120px;
-    height: 203px;
+    width: 145px;
+    height: 240px;
     padding-left: 11px;
     border: 2px solid $light;
     border-radius: 6%;
+    top: 83%;
+    right: 26%;
     .links {
+      position: relative;
       ul {
         color: $textColor;
         &:not(:last-child) {
           border-bottom: 1px solid $grayColor;
         }
         li {
+          padding-top: 5px;
+          padding-bottom: 4px;
           a {
             text-decoration: none;
             color: $dark;
             line-height: 2px;
           }
         }
+        .active {
+          color: rgb(99, 199, 99);
+        }
+        .font-size {
+          display: flex;
+          justify-content: start;
+          align-items: baseline;
+          .font1 {
+            font-size: 35px !important;
+            font-weight: bold;
+            color: $dark;
+          }
+          .font2 {
+            font-size: 25px !important;
+            font-weight: bold;
+            margin-left: 8px;
+          }
+          .font3 {
+            font-size: 15px !important;
+            font-weight: bold;
+            margin-left: 10px;
+            color: $dark;
+          }
+        }
+      }
+      .check-mark {
+        position: absolute;
+        color: rgb(99, 199, 99);
+        top: 8%;
+        right: 15%;
+        font-size: 22px;
       }
     }
   }

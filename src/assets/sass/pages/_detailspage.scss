@@ -1,72 +1,74 @@
-.box-item{
-    margin-top: 1%;
-   
-    .bar-notfiy{
-        ul{
-            display: flex;
-            span,li{
-                color: $textColor;
-                margin-right: 1%;
-            }
-        }
-        .active{
-            color: $mainColor;
-        }
+.box-item {
+  margin-top: 1%;
+
+  .bar-notfiy {
+    margin-top: 102px;
+    ul {
+      display: flex;
+      span,
+      li {
+        color: $textColor;
+        margin-right: 1%;
+      }
     }
-    h2{
-        font-size: 30px;
+    .active {
+      color: $mainColor;
     }
-    .head-with-border{
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .head-with-border {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-box {
+    float: $float-left;
+    margin-bottom: 20px;
+    box-shadow: 0px 9px 28px $grayColor;
+    border: 1px solid $grayColor;
+    margin-left: 10px;
+    img {
+      width: 100%;
+      margin-bottom: 2%;
+    }
+    .head-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .icon-box {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-end;
+        color: $scandColor;
+        i {
+          margin-left: 0%;
+          font-size: 18px;
+          margin-top: 4px;
+          margin-right: 32%;
+        }
+      }
+      .card-title {
+        padding-left: 5%;
+      }
     }
-    .card-box{
-        float: $float-left;
-        margin-bottom: 20px;
-        box-shadow: 0px 9px 28px $grayColor;
-        border: 1px solid $grayColor;
-        margin-left: 10px;
-        img{
-            width: 100%;
-            margin-bottom: 2%;
-        }
-        .head-card{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .icon-box{
-                display: flex;
-                justify-content: flex-end;
-                color: $scandColor;
-                i{
-                    margin-left: 0%;
-                    font-size: 18px;
-                    margin-top: 4px;
-                    margin-right: 32%;
-                }
-            }
-            .card-title{
-                padding-left: 5%;
-            }
-        }
-       
-        @media #{$minSmall} {
-            width: (100% / 1);
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-        @media #{$maxMobile}  {
-            width: 100%;
-            float: none;
-          }
-        
-       
-    .categury , p{
-       color: $textColor;
-       padding-left: 5%;
-     }
+
+    @media #{$minSmall} {
+      width: (100% / 1);
+      padding-left: 0px;
+      padding-right: 0px;
     }
+    @media #{$maxMobile} {
+      width: 100%;
+      float: none;
+    }
+
+    .categury,
+    p {
+      color: $textColor;
+      padding-left: 5%;
+    }
+  }
 }
 
 /*end card*/
