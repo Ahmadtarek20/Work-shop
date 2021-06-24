@@ -7,4 +7,5 @@ export interface News {
   description?: string;
   publishedAt?: Date;
   showOnHomepage?: boolean;
+  categuryName?: string;
 }

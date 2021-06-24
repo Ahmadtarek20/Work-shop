@@ -4,8 +4,8 @@
   <div class="container">
     <div class="bar-notfiy">
       <ul>
-        <li class="active">Home </li> <span>></span>
-        <li class="active">News </li> <span>></span>
+        <li class="active" [routerLink]="['/home']">Home </li> <span>></span>
+        <li class="active" [routerLink]="['/news']">News </li> <span>></span>
         <li>News Details </li>
       </ul>
     </div>
@@ -13,28 +13,19 @@
       <h2>News Details </h2>
     </div>
     <div class="card-box text-center-xs">
-      <img src="http://placehold.it/500x200/DDD">
 
-      <span class="categury">Categury Name</span>
+      <img *ngIf="newsItem?.urlToImage != null" src="{{newsItem?.urlToImage}}">
+      <img *ngIf="newsItem?.urlToImage == null" src="http://placehold.it/500x200/DDD">
+      <span class="categury">{{newsItem?.categuryName}}</span>
       <div class="head-card">
-        <h3 class="card-title"> player 1</h3>
+        <h3 class="card-title"> {{newsItem?.title}}</h3>
         <div class="icon-box">
           <i class="fa fa-heart" aria-hidden="true"></i>
           <i class="fa fa-share-alt" aria-hidden="true"></i>
         </div>
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ut molestias maiores repudiandae
-        veniam odio laboriosam atque voluptas nesciunt explicabo. Quasi assumenda quas minus accusamus
-        molestiae voluptates cum fugiat vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Temporibus ut molestias maiores repudiandae
-        veniam odio laboriosam atque voluptas nesciunt explicabo. Quasi assumenda quas minus accusamus
-        molestiae voluptates cum fugiat vitae.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ut molestias maiores repudiandae
-        veniam odio laboriosam atque voluptas nesciunt explicabo. Quasi assumenda quas minus accusamus
-        molestiae voluptates cum fugiat vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Temporibus ut molestias maiores repudiandae
-        veniam odio laboriosam atque voluptas nesciunt explicabo. Quasi assumenda quas minus accusamus
-        molestiae voluptates cum fugiat vitae.</p>
+      <p>{{newsItem?.description}}.</p>
+      <p>{{newsItem?.content}}.</p>
     </div>
 
     <div class="clearfix"></div>

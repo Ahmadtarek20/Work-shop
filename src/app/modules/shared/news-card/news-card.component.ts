@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { News } from 'src/app/Models/news';
+import { NewsService } from 'src/app/services/api/news.service';
 
 @Component({
   selector: 'app-news-card',
@@ -9,16 +10,15 @@ import { News } from 'src/app/Models/news';
 export class NewsCardComponent implements OnInit {
 
   @Input() newsItem: News;
-  @Output() show = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(private newsService: NewsService) { }
 
   ngOnInit(): void {
 
   }
 
   showDetails(newsItem) {
-    this.show.emit(newsItem);
+    this.newsService.setNewsItem(newsItem);
   }
 
 }

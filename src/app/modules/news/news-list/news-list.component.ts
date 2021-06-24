@@ -33,6 +33,18 @@ export class NewsListComponent implements OnInit {
   getSourceCategory() {
     this.categoriesService.getSourceCategory().subscribe((res: any) => {
       this.categoriesList = res.sourceCategory;
+      this.getSourceCateguryNewsList();
+    });
+  }
+
+  getSourceCateguryNewsList() {
+    this.categoriesList.forEach((group) => {
+      this.newsList.map((newsItem) => {
+        if (newsItem.sourceID == group.id) {
+          newsItem.categuryName = group.name;
+        }
+        return this.newsList;
+      });
     });
   }
 

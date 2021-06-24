@@ -1,5 +1,5 @@
 <a>
-  <div class="news-box text-center-xs" (click)="showDetails(newsItem)" [routerLink]="['details/', newsItem.id]">
+  <div class="news-box text-center-xs" (click)="showDetails(newsItem)" [routerLink]="['/news','details', newsItem.id]">
     <img *ngIf="newsItem?.urlToImage != null" src="{{newsItem?.urlToImage}}">
     <img *ngIf="newsItem?.urlToImage == null" src="http://placehold.it/300x200/DDD">
 
