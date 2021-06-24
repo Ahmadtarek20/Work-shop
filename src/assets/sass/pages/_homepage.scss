@@ -1,9 +1,18 @@
 .slider {
   position: relative;
-  padding-bottom: 20px;
+  height: fit-content;
+  @media #{$minSmall} {
+    display: none;
+  }
+  @media #{$minMedium} {
+    display: none;
+  }
+  @media #{$maxSmall} {
+    display: none;
+  }
+
   .over-slider {
     position: absolute;
-    text-align: center;
     text-align: center;
     font-weight: bold;
     color: $light;
@@ -13,35 +22,29 @@
     line-height: 1.7;
     z-index: 1;
     @media #{$minSmall} {
-      font-size: 15px;
-      top: 3%;
-      left: 24%;
+      display: none;
+      //background-color: red;
     }
     @media #{$minMedium} {
-      top: 12%;
-      left: 29%;
-      font-size: 20px;
-      line-height: 1.7;
+      display: none;
     }
     @media #{$minLarge} {
+      display: block;
       top: 42%;
       left: 29%;
       font-size: 33px;
       line-height: 1.7;
     }
     @media #{$maxMobile} {
-      top: 1%;
-      left: 18%;
-      font-size: 17px;
-      line-height: 1.5;
+      display: none;
     }
   }
   .img-slider {
-    position: relative;
     width: 100vw;
     height: 400px;
     .slider-container {
       position: absolute;
+      display: flex;
       width: 300%;
       top: 0;
       left: 0;
@@ -111,6 +114,9 @@
       top: 30%;
       right: 4%;
     }
+    @media #{$minMedium} {
+      display: none;
+    }
   }
   @keyframes slider {
     0%,
@@ -148,7 +154,10 @@
       padding: 15px;
     }
     @media #{$maxMobile} {
-      padding: 9px;
+      display: none;
+    }
+    @media #{$minMedium} {
+      display: none;
     }
   }
   .bukkets {
@@ -170,8 +179,10 @@
       padding: 1px;
     }
     @media #{$maxMobile} {
-      top: 45%;
-      left: 45%;
+      display: none;
+    }
+    @media #{$minMedium} {
+      margin-top: 0%;
     }
 
     li {
@@ -222,17 +233,26 @@
 /*end hone*/
 
 .news {
-  @media #{$maxMobile} {
-    margin-top: -28%;
-  }
   h2 {
     font-size: 30px;
   }
   .head-with-border {
     display: flex;
+    margin-top: 6%;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30%;
+
+    // @media #{$maxSmall} {
+    //   background-color: green;
+    //   margin-top: 8%;
+    // }
+    // @media #{$minMedium} {
+    //   background-color: blue;
+    // }
+    // @media #{$maxMobile} {
+    //   background-color: yellow;
+    //   margin-top: 11%;
+    // }
     .link {
       text-decoration: none;
       color: $scandColor;
@@ -334,53 +354,39 @@
   .txt-serv {
     position: absolute;
     top: 3%;
-    left: 35%;
+    left: 7%;
+    right: 7%;
     text-align: center;
     font-size: 22px;
-    @media #{$maxMobile} {
-      left: 12%;
-      font-size: 18px;
-    }
   }
   .shape-serv {
     position: absolute;
-    top: 27%;
+    top: 30%;
     display: flex;
-    left: 35%;
     flex-wrap: wrap;
+    left: 7%;
+    right: 7%;
     margin-top: 30px;
-    @media #{$minSmall} {
-      width: (36% / 1);
-    }
-
-    @media #{$maxMobile} {
-      width: (139% / 1);
-      left: 5%;
-    }
+    display: flex;
+    justify-content: center;
     .side-shape {
-      height: 150px;
       width: 150px;
       background-color: $grayColor;
       background-color: transparent;
       border: 5px solid $light;
       transform: rotate(45deg);
       margin-right: 65px;
-      @media #{$minMedium} {
-        height: 113px;
-        width: 113px;
-        margin-right: 65px;
+      margin-bottom: 60px;
+      @media #{$maxSmall} {
+        width: 100px;
+        height: 100px;
+        margin-right: 50px;
       }
       @media #{$maxMobile} {
-        height: 111px;
-        width: 111px;
-        margin-right: 65px;
+        width: 70px;
+        height: 70px;
+        margin-right: 25px;
       }
-      @media #{$minLarge} {
-        height: 123px;
-        width: 123px;
-        margin-right: 65px;
-      }
-
       &:hover {
         background-color: $scandColor;
         border: 5px solid $scandColor;
@@ -394,36 +400,21 @@
         -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         -o-transform: rotate(-45deg);
-        @media #{$minMedium} {
-          line-height: 2px;
+        @media #{$maxSmall} {
+          line-height: 10px;
         }
         @media #{$maxMobile} {
-          line-height: 1px;
-        }
-        @media #{$minLarge} {
-          line-height: 18px;
-        }
-        @media #{$minMedium} {
-          line-height: 15px;
+          line-height: 5px;
         }
         .icon {
           font-size: 65px;
-          @media #{$minMedium} {
-            font-size: 50px;
+          @media #{$maxSmall} {
+            font-size: 40px;
           }
           @media #{$maxMobile} {
-            font-size: 50px;
-          }
-          @media #{$minLarge} {
-            font-size: 50px;
+            font-size: 15px;
           }
         }
-      }
-    }
-    .before-last {
-      margin-left: 10%;
-      @media #{$minMedium} {
-        margin-left: 10%;
       }
     }
   }

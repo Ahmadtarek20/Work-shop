@@ -2,6 +2,15 @@
   margin-top: 2%;
   .bar-notfiy {
     padding-top: 3%;
+    @media #{$minMedium} {
+      padding-top: 7%;
+    }
+    @media #{$minLarge} {
+      padding-top: 3%;
+    }
+    @media #{$maxSmall} {
+      padding-top: 9%;
+    }
     ul {
       display: flex;
       span,

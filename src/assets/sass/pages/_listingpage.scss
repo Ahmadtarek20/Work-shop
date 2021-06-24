@@ -1,7 +1,13 @@
 .news {
   margin-top: 2%;
   .bar-notfiy {
-    padding-top: 3%;
+    position: relative;
+    @media #{$minMedium} {
+      padding-top: 7%;
+    }
+    @media #{$minLarge} {
+      padding-top: 3%;
+    }
     ul {
       display: flex;
       span,
@@ -14,9 +20,7 @@
       color: $mainColor;
     }
   }
-  @media #{$maxMobile} {
-    margin-top: -10%;
-  }
+
   h2 {
     font-size: 30px;
   }
@@ -28,15 +32,19 @@
     flex-wrap: wrap;
     margin-right: 108px;
     margin-left: 16px;
+    padding: 3px;
     @media #{$maxMobile} {
-      justify-content: space-evenly;
+      justify-content: space-between;
+    }
+    @media #{$minSmall} {
+      width: (96% / 1);
     }
     .date-start,
     .date-end,
     .categuries {
       position: relative;
       @media #{$maxMobile} {
-        margin-bottom: 2%;
+        margin-bottom: 4%;
       }
       label {
         position: absolute;
@@ -46,7 +54,6 @@
         padding: 10px;
         background-color: $light;
         border: 2px solid $grayColor;
-        color: $light;
         border-radius: 7%;
         -webkit-border-radius: 7%;
         -moz-border-radius: 7%;
@@ -56,7 +63,6 @@
     }
     .categuries {
       .input-select {
-        width: 100%;
         border: 2px solid $grayColor;
         padding: 10px;
         background-color: $light;
@@ -67,13 +73,28 @@
         -o-border-radius: 7%;
       }
     }
+    .filter {
+      button {
+        background-color: $scandColor;
+        font-size: 22px;
+        padding: 4px;
+        border-radius: 12%;
+        color: $light;
+        border: 1px solid $scandColor;
+      }
+      .reset {
+        margin-left: 2px;
+      }
+      @media #{$maxMobile} {
+        padding-top: 4%;
+      }
+    }
     .box-serch {
       .input-box {
         width: 300px;
         padding: 10px;
         background-color: $light;
         border: 2px solid $grayColor;
-        color: $light;
         border-radius: 7%;
         -webkit-border-radius: 7%;
         -moz-border-radius: 7%;
@@ -94,6 +115,9 @@
     }
     .sort {
       color: $scandColor;
+      @media #{$maxMobile} {
+        padding-top: 2%;
+      }
     }
   }
   .head-with-border-list {
@@ -142,7 +166,7 @@
       -o-border-radius: 20%;
     }
     @media #{$minSmall} {
-      width: (100% / 2);
+      width: (96% / 2);
       padding-left: 20px;
       padding-right: 20px;
     }

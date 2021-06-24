@@ -12,7 +12,6 @@ export class AppComponent {
   constructor(
     public themeService: ThemsService
   ) {
-    console.log(this.theme);
   }
 
 

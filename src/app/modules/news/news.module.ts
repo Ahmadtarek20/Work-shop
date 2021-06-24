@@ -6,6 +6,7 @@ import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import { HomeNewsListingComponent } from './home-news-listing/home-news-listing.component';
 import { NewsCardModule } from '../shared/news-card/news-card.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { NewsCardModule } from '../shared/news-card/news-card.module';
   imports: [
     CommonModule,
     NewsRoutingModule,
-    NewsCardModule
+    NewsCardModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     HomeNewsListingComponent

@@ -4,41 +4,49 @@
   <div class="container">
     <div class="bar-notfiy">
       <ul>
-        <li class="active">Home </li> <span>></span>
+        <li class="active" [routerLink]="['/home']">Home </li> <span>></span>
         <li>News </li>
       </ul>
     </div>
     <div class="head-with-border-list">
       <h2>News</h2>
     </div>
-    <div class="serch-bar">
-      <div class="date-start">
-        <label for="start">From</label>
-        <input class="input-box" type="date" id="start" name="trip-start">
+    <form [formGroup]="filterForm">
+      <div class="serch-bar">
+        <div class="date-start">
+          <label for="start">From</label>
+          <input class="input-box" formControlName="from" type="date" id="start">
+        </div>
+        <div class="date-end">
+          <label for="to">To</label>
+          <input class="input-box" formControlName="to" type="date" id="to">
+        </div>
+        <div class="categuries">
+          <label for="categuries">Categury</label>
+          <select class="input-select" id="categuries" formControlName="categuryId" name="categuries">
+            <ng-container *ngFor="let categuryItem of categoriesList">
+              <option [value]="categuryItem.id">
+                {{ categuryItem.name }}
+              </option>
+            </ng-container>
+          </select>
+        </div>
+        <div class="box-serch">
+          <input class="input-box" type="text" formControlName="searchInput" placeholder="Enter Address">
+          <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="filter">
+          <button (click)="onSubmit()">Search</button>
+          <button class="reset" (click)="resetFilter()">Reset</button>
+        </div>
+        <div class="sort">
+          <a>Sort by <i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></a>
+        </div>
       </div>
-      <div class="date-end">
-        <label for="to">To</label>
-        <input class="input-box" type="date" id="start" name="trip-start">
-      </div>
-      <div class="categuries">
-        <label for="categuries">Categury</label>
-        <select class="input-select" id="categuries" name="categuries">
-          <option selected value="">Select</option>
-          <ng-container *ngFor="let categuryItem of categoriesList">
-            <option [value]="categuryItem.id">
-              {{ categuryItem.name }}
-            </option>
-          </ng-container>
-        </select>
-      </div>
-      <div class="box-serch">
-        <input class="input-box" type="text" placeholder="Enter Address">
-        <button><i class="fa fa-search"></i></button>
-      </div>
-      <div class="sort">
-        <a>Sort by <i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></a>
-      </div>
-    </div>
+    </form>
+
+
+
 
     <div *ngFor="let newsItem of newsList">
       <app-news-card [newsItem]='newsItem'></app-news-card>

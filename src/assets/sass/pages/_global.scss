@@ -12,6 +12,9 @@ ol {
   list-style: none;
   padding: 0;
 }
+li {
+  cursor: pointer;
+}
 
 .main {
   background-color: var(--scandary-bg) !important;
