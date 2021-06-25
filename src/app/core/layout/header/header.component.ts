@@ -10,7 +10,8 @@ export class HeaderComponent implements OnInit {
 
   hideSideBar: boolean = false;
   openSetingMenue: boolean = false;
-  theme = localStorage.getItem('theme')
+  theme = localStorage.getItem('theme');
+  darkMood: boolean = false;
 
   constructor(
     public themeService: ThemsService
@@ -34,5 +35,10 @@ export class HeaderComponent implements OnInit {
   }
   changeTheme() {
     this.themeService.changeTheme();
+    if (this.darkMood == false) {
+      this.darkMood = true;
+    } else {
+      this.darkMood = false;
+    }
   }
 }
