@@ -6,12 +6,14 @@
   <a href="#" class="navbar__logo"> <img src="assets/images/link-logo.png"></a>
   <div class="navbar__bars"><i class="fas fa-bars"></i></div>
   <div class="navbar__menu">
-    <a href="#" class="navbar__menu--links hoverlink"> <i class="fa fa-search icon" aria-hidden="true"></i>
+    <input class="input-search-head" type="text" placeholder="Search" *ngIf="showSearch == true">
+    <a class="navbar__menu--links hoverlink"> <i class="fa fa-search icon" aria-hidden="true"
+        (click)="openSearch()"></i>
       <!-- <span>Search</span> -->
     </a>
-    <a href="#" class="navbar__menu--links hoverlink"> <i class="fa fa-bell icon" aria-hidden="true"></i>
+    <a class="navbar__menu--links hoverlink"> <i class="fa fa-bell icon" aria-hidden="true"></i>
     </a>
-    <a href="#" class="navbar__menu--links">
+    <a class="navbar__menu--links">
       <i>
         <img src="http://placehold.it/50x50/DDD">
       </i>

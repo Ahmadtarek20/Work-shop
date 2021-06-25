@@ -272,21 +272,25 @@
 .services {
   position: relative;
   margin-bottom: -4px;
+  img {
+    width: 205vh;
+  }
   .txt-serv {
     position: absolute;
     top: 3%;
     left: 7%;
     right: 7%;
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
+    color: $light;
   }
   .shape-serv {
     position: absolute;
-    top: 30%;
+    top: 22%;
     display: flex;
     flex-wrap: wrap;
-    left: 7%;
-    right: 7%;
+    left: 15%;
+    right: 15%;
     margin-top: 30px;
     display: flex;
     justify-content: center;

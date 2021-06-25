@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   openSetingMenue: boolean = false;
   theme = localStorage.getItem('theme');
   darkMood: boolean = false;
+  showSearch: boolean = false;
 
   constructor(
     public themeService: ThemsService
@@ -27,12 +28,22 @@ export class HeaderComponent implements OnInit {
       this.openSetingMenue = false;
     }
   }
+  openSearch() {
+    if (this.showSearch == false) {
+      this.showSearch = true;
+    } else {
+      this.showSearch = false;
+    }
+  }
+
   openSideMenue() {
     this.hideSideBar = true;
   }
+
   closeMenue() {
     this.hideSideBar = false;
   }
+
   changeTheme() {
     this.themeService.changeTheme();
     if (this.darkMood == false) {
