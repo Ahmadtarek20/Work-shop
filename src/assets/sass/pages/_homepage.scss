@@ -1,47 +1,35 @@
 .slider {
   position: relative;
   height: fit-content;
-  @media #{$minSmall} {
-    display: none;
-  }
-  @media #{$minMedium} {
-    display: none;
-  }
-  @media #{$maxSmall} {
-    display: none;
-  }
-
   .over-slider {
     position: absolute;
     text-align: center;
     font-weight: bold;
     color: $light;
-    top: 42%;
-    left: 29%;
+    top: 25%;
+    left: 15%;
+    right: 15%;
     font-size: 33px;
     line-height: 1.7;
     z-index: 1;
-    @media #{$minSmall} {
-      display: none;
-      //background-color: red;
-    }
-    @media #{$minMedium} {
-      display: none;
-    }
-    @media #{$minLarge} {
-      display: block;
-      top: 42%;
-      left: 29%;
-      font-size: 33px;
-      line-height: 1.7;
+    @media #{$maxSmall} {
+      top: 30%;
+      left: 0%;
+      right: 0%;
+      font-size: 30px;
+      line-height: 1;
     }
     @media #{$maxMobile} {
-      display: none;
+      top: 30%;
+      left: 0%;
+      right: 0%;
+      font-size: 30px;
+      line-height: 1;
     }
   }
   .img-slider {
-    width: 100vw;
-    height: 400px;
+    width: 100%;
+    height: 60vh;
     .slider-container {
       position: absolute;
       display: flex;
@@ -61,7 +49,7 @@
       .slide img {
         display: block;
         width: 100%;
-        height: 100%;
+        height: 60vh;
       }
     }
   }
@@ -82,12 +70,16 @@
       top: 38%;
     }
     @media #{$minLarge} {
-      top: 80%;
-      left: 20%;
+      top: 50%;
+      left: 25%;
     }
     @media #{$maxMobile} {
       top: 30%;
       left: 4%;
+    }
+    @media #{$maxSmall} {
+      top: 55%;
+      left: 3%;
     }
   }
   .next {
@@ -107,15 +99,16 @@
       top: 38%;
     }
     @media #{$minLarge} {
-      top: 80%;
-      right: 20%;
+      top: 50%;
+      right: 25%;
     }
     @media #{$maxMobile} {
       top: 30%;
       right: 4%;
     }
-    @media #{$minMedium} {
-      display: none;
+    @media #{$maxSmall} {
+      top: 55%;
+      right: 3%;
     }
   }
   @keyframes slider {
@@ -147,44 +140,13 @@
     -moz-border-radius: 10%;
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
-    @media #{$minSmall} {
-      padding: 8px;
-    }
-    @media #{$minLarge} {
-      padding: 15px;
-    }
-    @media #{$maxMobile} {
-      display: none;
-    }
-    @media #{$minMedium} {
-      display: none;
-    }
   }
   .bukkets {
     position: absolute;
     text-align: center;
-    top: 140%;
-    left: 48%;
-    @media #{$minSmall} {
-      top: 48%;
-      left: 44%;
-    }
-    @media #{$minMedium} {
-      top: 66%;
-      left: 47%;
-    }
-    @media #{$minLarge} {
-      top: 139%;
-      left: 46%;
-      padding: 1px;
-    }
-    @media #{$maxMobile} {
-      display: none;
-    }
-    @media #{$minMedium} {
-      margin-top: 0%;
-    }
-
+    top: 90%;
+    left: 24%;
+    right: 24%;
     li {
       display: inline-block;
       width: 20px;
@@ -196,40 +158,14 @@
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-      @media #{$minSmall} {
-        width: 10px;
-        height: 10px;
-      }
-      @media #{$minMedium} {
-        width: 15px;
-        height: 15px;
-      }
-      @media #{$maxMobile} {
-        width: 10px;
-        height: 10px;
-      }
-
       &.active {
         background-color: $light;
         width: 30px;
         height: 30px;
-        @media #{$minSmall} {
-          width: 15px;
-          height: 15px;
-        }
-        @media #{$minMedium} {
-          width: 20px;
-          height: 20px;
-        }
-        @media #{$maxMobile} {
-          width: 15px;
-          height: 15px;
-        }
       }
     }
   }
 }
-
 /*end hone*/
 
 .news {
@@ -241,21 +177,18 @@
     margin-top: 6%;
     justify-content: space-between;
     align-items: center;
-
-    // @media #{$maxSmall} {
-    //   background-color: green;
-    //   margin-top: 8%;
-    // }
-    // @media #{$minMedium} {
-    //   background-color: blue;
-    // }
-    // @media #{$maxMobile} {
-    //   background-color: yellow;
-    //   margin-top: 11%;
-    // }
+    @media #{$maxSmall} {
+      margin-top: 8%;
+    }
+    @media #{$minMedium} {
+    }
+    @media #{$maxMobile} {
+      margin-top: 11%;
+    }
     .link {
       text-decoration: none;
       color: $scandColor;
+      margin-right: 100px;
     }
   }
   a {
