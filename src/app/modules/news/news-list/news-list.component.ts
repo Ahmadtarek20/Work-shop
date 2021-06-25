@@ -17,7 +17,7 @@ export class NewsListComponent implements OnInit {
   pageCount = 6;
   pageNumber = 1;
   pages: Number[] = [];
-
+  sortFilter: boolean = false;
 
   filterForm = new FormGroup({
     from: new FormControl(null),
@@ -35,6 +35,7 @@ export class NewsListComponent implements OnInit {
     this.getNewsList();
     this.getSourceCategory();
   }
+
   getNewsList() {
     const params = {
       // any prams
@@ -49,25 +50,11 @@ export class NewsListComponent implements OnInit {
   getSourceCategory() {
     this.categoriesService.getSourceCategory().subscribe((res: any) => {
       this.categoriesList = res.sourceCategory;
-      this.getSourceCateguryNewsList();
+      this.getSourceCategoryNewsList();
     });
   }
 
-  sort() {
-    if (this.isAscendingSort) {
-      this.isAscendingSort = !this.isAscendingSort;
-      this.newsList.sort(function (a, b) {
-        return new Date(b.publishedAt).valueOf() - new Date(a.publishedAt).valueOf()
-      });
-    } else {
-      this.isAscendingSort = !this.isAscendingSort;
-      this.newsList.sort(function (a, b) {
-        return new Date(a.publishedAt).valueOf() - new Date(b.publishedAt).valueOf()
-      });
-    }
-  }
-
-  getSourceCateguryNewsList() {
+  getSourceCategoryNewsList() {
     this.categoriesList.forEach((group) => {
       this.newsList.map((newsItem) => {
         if (newsItem.sourceID == group.id) {
@@ -75,6 +62,44 @@ export class NewsListComponent implements OnInit {
         }
         return this.newsList;
       });
+    });
+  }
+
+  sort() {
+    if (this.sortFilter == false) {
+      this.sortFilter = true;
+    } else {
+      this.sortFilter = false;
+    }
+    // this finction is sorting date Ascending
+
+    // if (this.isAscendingSort) {
+    //   this.isAscendingSort = !this.isAscendingSort;
+    //   this.newsList.sort(function (a, b) {
+    //     return new Date(b.publishedAt).valueOf() - new Date(a.publishedAt).valueOf()
+    //   });
+    // } else {
+    //   this.isAscendingSort = !this.isAscendingSort;
+    //   this.newsList.sort(function (a, b) {
+    //     return new Date(a.publishedAt).valueOf() - new Date(b.publishedAt).valueOf()
+    //   });
+    // }
+  }
+
+  sortAlphabetically() {
+    this.newsList.sort(function (a, b) {
+      if (b.title.toLowerCase() > a.title.toLowerCase()) {
+        return -1
+      }
+      return 0
+    });
+  }
+  sortAlphabeticallyReverse() {
+    this.newsList.sort(function (a, b) {
+      if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        return -1
+      }
+      return 0
     });
   }
 
@@ -134,21 +159,19 @@ export class NewsListComponent implements OnInit {
     }
   }
 
-
-
   previousPage() {
     if (this.pageNumber === 1)
       return;
     this.pageNumber--;
     this.changePage(this.pageNumber);
   }
+
   nextPage() {
     debugger;
     if (this.pageNumber === this.pages.length)
       return;
     this.pageNumber++;
     this.changePage(this.pageNumber);
-
   }
 
 }

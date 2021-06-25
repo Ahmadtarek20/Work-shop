@@ -39,7 +39,34 @@
     @media #{$minSmall} {
       width: (91% / 1);
     }
-
+    .sort-filter {
+      background-color: $light;
+      color: $dark;
+      display: block;
+      width: 100px;
+      height: 84px;
+      font-size: 17px;
+      line-height: 40px;
+      @include bRadius(7%);
+      padding-left: 5px;
+      position: absolute;
+      right: 9%;
+      top: 15%;
+      z-index: 1;
+      @media #{$maxSmall} {
+        background-color: red;
+        top: 13%;
+      }
+      @media #{$maxMobile} {
+        display: none;
+      }
+      span {
+        display: block;
+        &:hover {
+          background-color: $textColor;
+        }
+      }
+    }
     .date-start,
     .date-end,
     .categuries {
