@@ -301,16 +301,23 @@
       border: 5px solid $light;
       transform: rotate(45deg);
       margin-right: 65px;
-      margin-bottom: 60px;
       @media #{$maxSmall} {
         width: 100px;
         height: 100px;
         margin-right: 50px;
+        margin-bottom: 45px;
       }
       @media #{$maxMobile} {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
         margin-right: 25px;
+        margin-bottom: 33px;
+      }
+      @media #{$minMedium} {
+        margin-bottom: 60px;
+      }
+      @media #{$minLarge} {
+        margin-bottom: 0;
       }
       &:hover {
         background-color: $secondColor;
@@ -329,7 +336,7 @@
           line-height: 10px;
         }
         @media #{$maxMobile} {
-          line-height: 5px;
+          line-height: 16px;
         }
         .icon {
           font-size: 65px;
