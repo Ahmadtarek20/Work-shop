@@ -1,48 +1,49 @@
 /*media responsive*/
 
 @mixin minMedium {
-    @media #{$minMedium} {
-        @content;
-    }
+  @media #{$minMedium} {
+    @content;
+  }
 }
 
 /* prefixes Mixin*/
 
-@mixin prefixer($property,$value, $prefixes: ()) {
-    @each $prefix in $prefixes {
-        #{'-' + $prefix + '-' + $property}: $value
-    }
-    #{$property}: $value;
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
 }
 
-/* transition Mixin*/ 
+/* transition Mixin*/
 
 @mixin transition($args...) {
-    -webkit-transition: $args; 
-    -moz-transition: $args; 
-    -o-transition: $args; 
-    transition: $args; 
- }
-
- /* keyFrame Mixin*/ 
-
- @mixin keyFrame($animation-name) {
-    @-webkit-keyframes #{$animation-name}{
-        @content;
-    }
-    @-moz-keyframes #{$animation-name}{
-        @content;
-    }
-    @keyframes #{$animation-name}{
-        @content;
-    }
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
 
- /* opacity Mixin*/ 
-@mixin opacity($value) {
-    zoom: 1;
-    $opacity-ie: $value * 100;
-    filter: alpha(opacity = $opacity-ie);
-    -webkit-filter: alpha(opacity = $opacity-ie);
-    opacity: $value;
- }
+/* bRadius Mixin*/
+
+@mixin bRadius($r) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  -o-border-radius: $r;
+  -ms-border-radius: $r;
+  border-radius: $r;
+}
+
+/* keyFrame Mixin*/
+
+@mixin keyFrame($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}

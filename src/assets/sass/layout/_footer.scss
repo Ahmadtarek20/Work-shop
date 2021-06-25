@@ -30,21 +30,13 @@
       background-color: $light;
       border: 2px solid $grayColor;
       color: $light;
-      border-radius: 7%;
-      -webkit-border-radius: 7%;
-      -moz-border-radius: 7%;
-      -ms-border-radius: 7%;
-      -o-border-radius: 7%;
+      @include bRadius(7%);
     }
     button {
       padding: 10px;
       background-color: $secondColor;
       border: 1px solid $secondColor;
-      border-radius: 7%;
-      -webkit-border-radius: 7%;
-      -moz-border-radius: 7%;
-      -ms-border-radius: 7%;
-      -o-border-radius: 7%;
+      @include bRadius(7%);
     }
   }
   .social {
