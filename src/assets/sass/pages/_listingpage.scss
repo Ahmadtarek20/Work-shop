@@ -37,14 +37,18 @@
       justify-content: space-between;
     }
     @media #{$minSmall} {
-      width: (96% / 1);
+      width: (91% / 1);
     }
+
     .date-start,
     .date-end,
     .categuries {
       position: relative;
       @media #{$maxMobile} {
         margin-bottom: 4%;
+      }
+      @media #{$maxSmall} {
+        margin-top: 6%;
       }
       label {
         position: absolute;
@@ -60,6 +64,9 @@
         -ms-border-radius: 7%;
         -o-border-radius: 7%;
       }
+      @media #{$maxSmall} {
+        margin-top: 6%;
+      }
     }
     .categuries {
       .input-select {
@@ -71,19 +78,25 @@
         -moz-border-radius: 7%;
         -ms-border-radius: 7%;
         -o-border-radius: 7%;
+        @media #{$maxSmall} {
+          margin-top: 6%;
+        }
       }
     }
     .filter {
       button {
-        background-color: $scandColor;
+        background-color: $secondColor;
         font-size: 22px;
         padding: 4px;
         border-radius: 12%;
         color: $light;
-        border: 1px solid $scandColor;
+        border: 1px solid $secondColor;
       }
       .reset {
         margin-left: 2px;
+      }
+      @media #{$maxSmall} {
+        margin-top: 4%;
       }
       @media #{$maxMobile} {
         padding-top: 4%;
@@ -100,10 +113,13 @@
         -moz-border-radius: 7%;
         -ms-border-radius: 7%;
         -o-border-radius: 7%;
+        @media #{$maxSmall} {
+          margin-top: 14%;
+        }
       }
       button {
-        border: 2px solid $scandColor;
-        background-color: $scandColor;
+        border: 2px solid $secondColor;
+        background-color: $secondColor;
         color: $light;
         padding: 10px;
         border-radius: 7%;
@@ -114,7 +130,8 @@
       }
     }
     .sort {
-      color: $scandColor;
+      color: $secondColor;
+      font-size: 20px;
       @media #{$maxMobile} {
         padding-top: 2%;
       }
@@ -126,7 +143,7 @@
     align-items: center;
     .link {
       text-decoration: none;
-      color: $scandColor;
+      color: $secondColor;
     }
   }
   .news-box {
@@ -145,10 +162,10 @@
     .icon-box {
       display: flex;
       justify-content: flex-end;
-      color: $scandColor;
+      color: $secondColor;
       i {
         margin-left: 1%;
-        font-size: 20px;
+        font-size: 30px;
         margin-top: 4px;
         margin-right: 2%;
       }
@@ -194,7 +211,7 @@
       padding-left: 5%;
     }
     .link {
-      color: $scandColor;
+      color: $secondColor;
       text-decoration: none;
       padding-left: 5%;
       padding-bottom: 5%;
@@ -223,10 +240,14 @@
         font-size: 12px;
       }
       i {
-        color: $scandColor;
+        color: $secondColor;
       }
       .active {
-        background-color: $scandColor !important;
+        background-color: $secondColor !important;
+      }
+      .dimmed {
+        color: $light;
+        cursor: default;
       }
     }
   }

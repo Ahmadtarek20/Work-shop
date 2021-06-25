@@ -22,25 +22,24 @@
           <input class="input-box" formControlName="to" type="date" id="to">
         </div>
         <div class="categuries">
-          <label for="categuries">Categury</label>
-          <select class="input-select" id="categuries" formControlName="categuryId" name="categuries">
-            <ng-container *ngFor="let categuryItem of categoriesList">
-              <option [value]="categuryItem.id">
-                {{ categuryItem.name }}
+          <label for="categories">Category</label>
+          <select class="input-select" id="categories" formControlName="categoryId" name="categories">
+            <ng-container *ngFor="let categoryItem of categoriesList">
+              <option [value]="categoryItem.id">
+                {{ categoryItem.name }}
               </option>
             </ng-container>
           </select>
         </div>
         <div class="box-serch">
-          <input class="input-box" type="text" formControlName="searchInput" placeholder="Enter Address">
-          <button><i class="fa fa-search"></i></button>
+          <input class="input-box" type="text" formControlName="searchInput" placeholder="Tite">
+          <button (click)="onSubmit()"><i class="fa fa-search"></i></button>
         </div>
         <div class="filter">
-          <button (click)="onSubmit()">Search</button>
           <button class="reset" (click)="resetFilter()">Reset</button>
         </div>
         <div class="sort">
-          <a>Sort by <i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></a>
+          <a (click)="sort()">Sort by <i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></a>
         </div>
       </div>
     </form>
@@ -57,14 +56,11 @@
 
     <div class="pagenation">
       <ul class="bukkets">
-        <i class="fa fa-chevron-left prev" aria-hidden="true"></i>
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <i class="fa fa-chevron-right next" aria-hidden="true"></i>
-
+        <i class="fa fa-chevron-left prev" [class.dimmed]="pageNumber == 1" (click)="previousPage()"
+          aria-hidden="true"></i>
+        <li [class.active]="page == pageNumber" (click)="changePage(page)" *ngFor="let page of pages">{{page}}</li>
+        <i class="fa fa-chevron-right next" (click)="nextPage()" [class.dimmed]="pageNumber == pages.length"
+          aria-hidden="true"></i>
       </ul>
     </div>
   </div>

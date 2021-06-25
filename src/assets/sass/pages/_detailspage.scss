@@ -50,12 +50,13 @@
       .icon-box {
         display: flex;
         justify-content: flex-end;
-        color: $scandColor;
+        color: $secondColor;
         i {
           margin-left: 0%;
           font-size: 18px;
           margin-top: 4px;
           margin-right: 32%;
+          font-size: 35px;
         }
       }
       .card-title {

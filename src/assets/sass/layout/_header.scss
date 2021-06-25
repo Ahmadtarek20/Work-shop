@@ -15,6 +15,12 @@
   width: 100%;
   top: 0;
 
+  .navbar__logo {
+    img {
+      width: 85px;
+      position: relative;
+    }
+  }
   &__logo {
     cursor: pointer;
     text-decoration: none;
@@ -60,7 +66,7 @@
       width: 80%;
     }
     @media #{$minMedium} {
-      width: 45%;
+      width: 38%;
     }
     @media #{$maxMobile} {
       display: none;
@@ -72,7 +78,7 @@
       ul {
         position: absolute;
         display: grid;
-        margin-top: 50%;
+        margin-top: 67%;
         i {
           margin-bottom: 30px;
         }
@@ -94,10 +100,10 @@
         }
       }
       .contact-us {
-        margin-top: 17%;
+        margin-top: 20%;
       }
       .active {
-        color: $scandColor;
+        color: $secondColor;
       }
     }
   }
@@ -140,7 +146,7 @@
         }
 
         .active {
-          color: $scandColor;
+          color: $secondColor;
         }
         .font-size {
           display: flex;
@@ -170,11 +176,11 @@
         }
       }
       .active {
-        color: $scandColor;
+        color: $secondColor;
       }
       .check-mark {
         position: absolute;
-        color: $scandColor;
+        color: $secondColor;
         top: 8%;
         right: 15%;
         font-size: 22px;
@@ -191,6 +197,7 @@
     list-style: none;
     text-align: center;
     margin-right: 24px;
+    font-size: 20px;
 
     @include tablet {
       display: none;
@@ -212,7 +219,7 @@
       }
     }
     .hoverlink:hover {
-      background-color: $scandColor;
+      background-color: $secondColor;
       height: 22px;
       width: 6px;
       transition: all 0.3s ease;

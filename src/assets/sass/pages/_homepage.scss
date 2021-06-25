@@ -56,7 +56,7 @@
   .prev {
     position: absolute;
     z-index: 1;
-    border: 1px solid $scandColor;
+    border: 1px solid $secondColor;
     padding: 11px;
     top: 80%;
     left: 20%;
@@ -85,7 +85,7 @@
   .next {
     position: absolute;
     z-index: 1;
-    border: 1px solid $scandColor;
+    border: 1px solid $secondColor;
     padding: 11px;
     top: 80%;
     right: 20%;
@@ -131,10 +131,10 @@
   button {
     border-radius: 9%;
     font-size: 19px;
-    background-color: $scandColor;
+    background-color: $secondColor;
     color: $light;
     padding: 15px;
-    border: 1px solid $scandColor;
+    border: 1px solid $secondColor;
     border-radius: 10%;
     -webkit-border-radius: 10%;
     -moz-border-radius: 10%;
@@ -187,8 +187,9 @@
     }
     .link {
       text-decoration: none;
-      color: $scandColor;
+      color: $secondColor;
       margin-right: 100px;
+      font-size: 20px;
     }
   }
   a {
@@ -208,7 +209,7 @@
     .icon-box {
       display: flex;
       justify-content: flex-end;
-      color: $scandColor;
+      color: $secondColor;
       i {
         margin-left: 4%;
         font-size: 20px;
@@ -257,13 +258,13 @@
       padding-left: 5%;
     }
     .link {
-      color: $scandColor;
+      color: $secondColor;
       text-decoration: none;
       padding-left: 5%;
       padding-bottom: 5%;
       display: block;
       text-decoration: none;
-      color: $scandColor;
+      color: $secondColor;
       position: absolute;
       width: 100%;
       top: 90%;
@@ -321,8 +322,8 @@
         margin-right: 25px;
       }
       &:hover {
-        background-color: $scandColor;
-        border: 5px solid $scandColor;
+        background-color: $secondColor;
+        border: 5px solid $secondColor;
       }
       .content {
         color: $light;
